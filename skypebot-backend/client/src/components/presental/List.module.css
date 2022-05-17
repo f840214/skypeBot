@@ -1,0 +1,13 @@
+.table{
+    height:550px;
+    overflow:auto;
+    display:block !important;
+}
+
+.tableDetail{
+    white-space:nowrap;
+}
+
+.search{
+    margin-left: auto; 
+}

@@ -1,0 +1,28 @@
+{
+  "name": "storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "client": "npm start --prefix ./client",
+    "build-client": "npm run build --prefix ./client & del \"./build/*\" & xcopy \"./staticData\" \"./build/staticData\" & move ./client/build ./build"
+  },
+  "author": "klaus",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "ejs": "^2.6.2",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "mongoose": "^5.4.20",
+    "uuid": "^3.3.2"
+  },
+  "engines": {
+    "node": "10.15.2"
+  }
+}

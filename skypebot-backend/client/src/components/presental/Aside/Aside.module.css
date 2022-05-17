@@ -1,0 +1,9 @@
+.aside {
+  padding-top: 64px;
+  width: 150px;
+  height: calc(100vh - 64px);
+  background-color: #515a6e;
+}
+.menu_item{
+  color:#FFFFFF !important;
+}

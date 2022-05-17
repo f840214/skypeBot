@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('head'); %>
+<body class="body_bg-img" >
+<nav class="navbar navbar-dark bg-dark ">
+  <a class="navbar-brand m-sm-0 m-auto" href="#"><div class="navbar-logo"><img class="img-fluid" src="https://www.ebet.com/en-US/img/logo.png" alt="eBET"></div></a>
+</nav>
+<div class="container bg-white card my-3 py-4 px-5 card_bg-img" id="card">
+    <%- include('form'); %>
+    <%- include('thank'); %>
+</div>
+</body>
+<script>
+function handleSubmit(){
+    const skypeName = document.getElementById('skypeName').value;
+    const YM = document.getElementById('YM').value;
+    const rating = document.querySelector('.rating:checked').value;
+    const comment = document.getElementById('comment').value;
+    const ip = document.getElementById('ip').value;
+    const ui = document.querySelector('.ui:checked').value;
+    const gameType = document.querySelector('.game-type:checked').value;
+    const introduce = document.querySelector('.introduce:checked').value;
+    
+    if (skypeName && YM && rating) {
+        axios.get("https://docs.google.com/forms/d/e/1FAIpQLSdbhktEC8Kjv6-iHqJ4MPECZgb0wQsHkB1Gl6BpAkhqiA4Uqw/formResponse",
+            {
+                params: {
+                    "entry.372846301": comment ? comment : '未提供意見',
+                    "entry.237213443": ip,
+                    "entry.673797154": skypeName,
+                    "entry.683319132": rating,
+                    "entry.839337088": YM,
+                    "entry.1378734613": ui,
+                    "entry.1033013091": gameType,
+                    "entry.1695667534": introduce
+                }
+            })
+            .catch(presentThank);
+        } else {
+            window.alert('不能為空白');
+        }
+    }
+$('#submitBtn').on('click', handleSubmit);
+$('#l-close').on('click', ()=>window.close());
+function presentThank (){
+    $('#form').remove();
+    $('#thank').addClass('d-none')
+    $('#thank').removeClass('d-none')
+}
+</script>
+</html>

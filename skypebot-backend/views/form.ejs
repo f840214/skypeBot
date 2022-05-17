@@ -1,0 +1,102 @@
+<form id="form">
+    <h2 class="font-weight-bold card-title">满意度调查</h2>
+    <h5 class="card-subtitle mb-2 text-muted">Satisfaction surveys</h5>
+    <hr />
+        <div class="form-group row d-none">
+            <label class="font-weight-bold col-form-label col-md-5" for="skypeName">skype群名:<br/><span>Skype group name</span></label>
+            <div class="col-md-7">
+                <input id="skypeName" class="form-control-plaintext" type="text" name="skypeName" required readonly value=<%= name %>>
+            </div>
+        </div>
+        <div class="form-group row d-none">
+            <label class="font-weight-bold col-form-label col-md-5" for="YM">评分月份:<br/><span>Rating for month</span></label>
+            <div class="col-md-7">
+                <input id="YM" class="form-control-plaintext" type="text" name="YM" required readonly value=<%= YM %>>
+            </div>
+        </div>
+        <div class="form-group d-none">
+            <label class="font-weight-bold col-form-label" for="ip">ip位址:<br/><span>IP address</span></label>
+            <input id="ip" class="form-control-plaintext" type="text" name="ip" required readonly value=<%= ip %>>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <legend  class="font-weight-bold col-form-label col-md-5 pt-0" for="rating" id="l-rating">整体評分:<br/><span>Rating</span></legend>
+                <div class="col-md-7">
+                <div class="form-check">
+                    <input type="radio" name="rating" value="1" class="rating form-check-input" id="rating1"><label for="rating1">★</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="rating" value="2" class="rating form-check-input" id="rating2"><label for="rating2">★★</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="rating" value="3" class="rating form-check-input" id="rating3" ><label for="rating3">★★★</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="rating" value="4" class="rating form-check-input" id="rating4" checked><label for="rating4">★★★★</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="rating" value="5" class="rating form-check-input" id="rating5"><label for="rating5">★★★★★</label>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <legend  class="font-weight-bold col-form-label col-md-5 pt-0" for="ui">您觉得我方的游戏介面如何？<br/><span>How is our user interface?</span></legend>
+                <div class="col-md-7">
+                    <div class="form-check">
+                        <input type="radio" name="ui" value="很好" class="ui form-check-input" id="ui1" checked><label for="ui1">很好 Excellent</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="ui" value="普通" class="ui form-check-input" id="ui2"><label for="ui2">普通 Normal</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="ui" value="不好" class="ui form-check-input" id="ui3"><label for="ui3">不好 Bad</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <legend  class="font-weight-bold col-form-label col-md-5 pt-0" for="game-type">您对我方的哪一个游戏项目最满意?<br/><span>Which game are you most satisfied with?</span></legend>
+                <div class="col-md-7">
+                    <div class="form-check">
+                        <input type="radio" name="game-type" value="百家乐" class="game-type form-check-input" id="game-type1" checked><label for="game-type1">百家乐 Baccarat</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="game-type" value="骰宝" class="game-type form-check-input" id="game-type2"><label for="game-type2">骰宝  Sic-Bo</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="game-type" value="轮盘" class="game-type form-check-input" id="game-type3" ><label for="game-type3">轮盘 Roulette</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="game-type" value="龙虎" class="game-type form-check-input" id="game-type4" ><label for="game-type4">龙虎 Dragon Tiger</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="game-type" value="牛牛" class="game-type form-check-input" id="game-type5" ><label for="game-type5">牛牛 BullBull</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="game-type" value="老虎机" class="game-type form-check-input" id="game-type6" ><label for="game-type6">老虎机 Slot</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <legend  class="font-weight-bold col-form-label col-md-5 pt-0" for="introduce">您会不会介绍合作伙伴使用 eBET 服务呢?<br/><span> Would you introduce eBET service to your business partners?</span></legend>
+                <div class="col-md-7">
+                    <div class="form-check">
+                        <input type="radio" name="introduce" value="是" class="introduce form-check-input" id="introduce1" checked><label for="introduce1">是 Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="introduce" value="否" class="introduce form-check-input" id="introduce2"><label for="introduce2">否 No</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comment" class="font-weight-bold" >请提供您的建议，谢谢<br/><span>Please provide your suggestions to us. Thank you</span></label >
+            <textarea class="form-control" name="entry.1229569652" id="comment" cols="50" rows="8" style="resize:none" ></textarea>
+        </div>
+        <button id="submitBtn" class="btn btn-success font-weight-bold" type="button" >送出 (Submit)</button>
+    </form>
